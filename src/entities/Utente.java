@@ -1,12 +1,14 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Utente {
 	private int id;
 	private String nome;
 	private String email;
 	private ArrayList<Libro> libriAcquistati;
+	private HashSet<String> generi;
 	
 	public Utente(int id, String nome, String email) {
 		this.id = id;
@@ -51,8 +53,17 @@ public class Utente {
 		libriAcquistati.add(libro);
 	}
 	
-	public List<Libro> raccomandaLibri() {
+	public ArrayList<Libro> raccomandaLibri() {
+		if(libriAcquistati.isEmpty()) {
+			// bisogna far vedere i libri più popolari nel sistema
+		}
 		
+		for(Libro libro : libriAcquistati) {
+			String genere = libro.getGenere();
+			generi.add(genere);
+		}
+		
+		// libri stesso genere e valutazione
 	}
 	
 	
