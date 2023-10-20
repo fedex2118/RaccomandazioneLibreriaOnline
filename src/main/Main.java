@@ -37,9 +37,9 @@ public class Main {
         System.out.println(recensione3);
         
         // TEST CONNESSIONE
-		String url = "jdbc:mysql://localhost:3306/shop";
-		String user = "root";
-		String pwd = "root";
+		String url = "jdbc:mysql://localhost:3306/libreriaonline";
+		String user = "javauser";
+		String pwd = "eAbrfcjiGdMo88eE";
 	}
 
 }

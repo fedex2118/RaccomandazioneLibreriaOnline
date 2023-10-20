@@ -9,7 +9,7 @@ import gestoreConnessioni.GestoreConnessioni;
 import libreriaManager.LibreriaOnline;
 
 public class RecensioneDAO {
-	public ArrayList<Recensione> prendiRecensioni(GestoreConnessioni gc, LibreriaOnline libreria) {
+	public static ArrayList<Recensione> prendiRecensioni(GestoreConnessioni gc, LibreriaOnline libreria) {
 		String query = "SELECT * FROM Recensione";
 		
 		ResultSet rs = gc.eseguiStatementQuery(query);
