@@ -45,6 +45,26 @@ public class LibreriaOnline {
 		}
 	}
 	
+	// TODO da migliorare sta fallendo
+	public int getMediaValutazioniLibro(Libro l) {
+		int media = 0;
+		
+		ArrayList<Integer> valutazioni = new ArrayList<>();
+		
+		for(Recensione r: recensioni) {
+			if(r.getLibroId() == l.getIdLibro()) {
+				valutazioni.add(r.getValutazione());
+				media += r.getValutazione();
+			}
+		}
+		
+		if (valutazioni.isEmpty())
+			return 0;
+		
+		media = media / valutazioni.size();
+		return media;
+	}
+	
 	// Getters & Setters
 	public ArrayList<Utente> getUtenti() {
 		return utenti;

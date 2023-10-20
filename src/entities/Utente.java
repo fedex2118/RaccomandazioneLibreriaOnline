@@ -65,6 +65,11 @@ public class Utente {
 	 * for(Libro libro : libriAcquistati) { String genere = libro.getGenere();
 	 * generi.add(genere); }
 	 * 
+	 * TODO
+	 * i libri devono avere lo stesso genere di quelli acquistati
+	 * i libri devono avere una media di valutazioni between 4 e 5
+	 * 
+	 * 
 	 * // libri stesso genere e valutazione }
 	 */
 	

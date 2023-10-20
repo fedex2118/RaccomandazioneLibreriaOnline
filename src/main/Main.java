@@ -43,8 +43,8 @@ public class Main {
         
         // TEST CONNESSIONE
 		String url = "jdbc:mysql://localhost:3306/libreriaonline";
-		String user = "javauser";
-		String pwd = "eAbrfcjiGdMo88eE";
+		String user = "root";
+		String pwd = "root";
 		
 		LibreriaOnline libreriaOnline = new LibreriaOnline();
 		
@@ -58,6 +58,11 @@ public class Main {
 		System.out.println(libreriaOnline.getUtenti());
 		System.out.println(libreriaOnline.getLibri());
 		System.out.println(libreriaOnline.getRecensioni());
+		
+		// DA CORREGGERE
+		for(Libro libro: libreriaOnline.getLibri()) {
+			System.out.println(libreriaOnline.getMediaValutazioniLibro(libro));
+		}
 		
 		
 	}
