@@ -49,6 +49,10 @@ public class Utente {
 		this.libriAcquistati = libriAcquistati;
 	}
 	
+	public Recensione lasciaRecensioni(Libro l, int valutazione, String commento) {
+		return new Recensione(this, l, valutazione, commento);
+	}
+	
 	public void acquistaLibro (Libro libro) {
 		libriAcquistati.add(libro);
 	}

@@ -23,14 +23,23 @@ public class Main {
         Recensione recensione2 = new Recensione(utente2, libro1, 4, "Molto interessante.");
         Recensione recensione3 = new Recensione(utente1, libro2, 4, "Mi è piaciuto molto.");
         
-        utente1.toString();
-        utente2.toString();
+        
+        System.out.println(utente1);
+        System.out.println(utente2);
+        System.out.println(libro1);
+        System.out.println(libro2);
+        System.out.println(libro3);
         libro1.mostraDettagli();
         libro2.mostraDettagli();
         libro3.mostraDettagli();
-        recensione1.toString();
-        recensione2.toString();
-        recensione3.toString();
+        System.out.println(recensione1);
+        System.out.println(recensione2);
+        System.out.println(recensione3);
+        
+        // TEST CONNESSIONE
+		String url = "jdbc:mysql://localhost:3306/shop";
+		String user = "root";
+		String pwd = "root";
 	}
 
 }
