@@ -50,7 +50,7 @@ public class Utente {
 	}
 	
 	public Recensione lasciaRecensioni(Libro l, int valutazione, String commento) {
-		return new Recensione(this, l, valutazione, commento);
+		return new Recensione(this.getId(), l.getId(), valutazione, commento);
 	}
 	
 	public void acquistaLibro (Libro libro) {

@@ -1,32 +1,32 @@
 package entities;
 
 public class Recensione {
-	private Utente utente;
-	private Libro libro;
+	private int idLibro;
+	private int idUtente;
 	private int valutazione;
 	private String commento;
 	
-	public Recensione(Utente utente, Libro libro, int valutazione, String commento) {
-		this.utente = utente;
-		this.libro = libro;
+	public Recensione (int libroId, int utenteId, int valutazione, String commento) {
+		this.idLibro = libroId;
+		this.idUtente = utenteId;
 		this.valutazione = valutazione;
 		this.commento = commento;
 	}
 
-	public Utente getUtente() {
-		return utente;
+	public int getUtenteId() {
+		return idUtente;
 	}
 
-	public void setUtente(Utente utente) {
-		this.utente = utente;
+	public void setUtenteId(int utenteId) {
+		this.idUtente = utenteId;
 	}
 
-	public Libro getLibro() {
-		return libro;
+	public int getLibroId() {
+		return idLibro;
 	}
 
-	public void setLibro(Libro libro) {
-		this.libro = libro;
+	public void setLibroId(int libroId) {
+		this.idLibro = libroId;
 	}
 
 	public int getValutazione() {
@@ -46,6 +46,6 @@ public class Recensione {
 	}
 	
 	public String toString() {
-		return "Utente: " + utente + "Libro: " + libro + "\nValutazione: " + valutazione + "\nCommento: " + commento;
+		return "UtenteId: " + idUtente + "LibroId: " + idLibro + "\nValutazione: " + valutazione + "\nCommento: " + commento;
 	}
 }
