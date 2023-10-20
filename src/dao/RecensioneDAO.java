@@ -18,9 +18,9 @@ public class RecensioneDAO {
 		
 		try {
 			while(rs.next()) {
-				int idLibro = Integer.parseInt(rs.getString(0));
-				int idUtente = Integer.parseInt(rs.getString(1));
-				int valutazione = Integer.parseInt(rs.getString(2));
+				int idLibro = Integer.parseInt(rs.getString(1));
+				int idUtente = Integer.parseInt(rs.getString(2));
+				int valutazione = Integer.parseInt(rs.getString(3));
 				String commento = rs.getString(3);
 				Recensione recensione = new Recensione(idUtente, idLibro, 
 						valutazione, commento);

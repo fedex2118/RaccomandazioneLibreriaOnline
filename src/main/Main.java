@@ -38,8 +38,8 @@ public class Main {
         
         // TEST CONNESSIONE
 		String url = "jdbc:mysql://localhost:3306/libreriaonline";
-		String user = "javauser";
-		String pwd = "eAbrfcjiGdMo88eE";
+		String user = "root";
+		String pwd = "root";
 	}
 
 }

@@ -19,11 +19,12 @@ public class LibroDAO {
 
 		try {
 			while (rs.next()) {
-				int idLibro = Integer.parseInt(rs.getString(0));
-				int idUtente = Integer.parseInt(rs.getString(1));
-				int valutazione = Integer.parseInt(rs.getString(2));
-				String commento = rs.getString(3);
-				Libro libro = new Libro(idUtente, idLibro, valutazione, commento);
+				int idLibro = Integer.parseInt(rs.getString(1));
+				String titolo = rs.getString(2);
+				String autore = rs.getString(3);
+				String genere = rs.getString(4);
+				float prezzo = Float.parseFloat(rs.getString(5));
+				Libro libro = new Libro(idLibro, titolo, autore, genere, prezzo);
 				libri.add(libro);
 			}
 		} catch (SQLException e) {
