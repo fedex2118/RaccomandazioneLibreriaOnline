@@ -45,5 +45,7 @@ public class Recensione {
 		this.commento = commento;
 	}
 	
-	
+	public String toString() {
+		return "Utente: " + utente + "Libro: " + libro + "\nValutazione: " + valutazione + "\nCommento: " + commento;
+	}
 }

@@ -53,17 +53,18 @@ public class Utente {
 		libriAcquistati.add(libro);
 	}
 	
-	public ArrayList<Libro> raccomandaLibri() {
-		if(libriAcquistati.isEmpty()) {
-			// bisogna far vedere i libri più popolari nel sistema
-		}
-		
-		for(Libro libro : libriAcquistati) {
-			String genere = libro.getGenere();
-			generi.add(genere);
-		}
-		
-		// libri stesso genere e valutazione
+	/*
+	 * public ArrayList<Libro> raccomandaLibri() { if(libriAcquistati.isEmpty()) {
+	 * // bisogna far vedere i libri più popolari nel sistema }
+	 * 
+	 * for(Libro libro : libriAcquistati) { String genere = libro.getGenere();
+	 * generi.add(genere); }
+	 * 
+	 * // libri stesso genere e valutazione }
+	 */
+	
+	public String toString() {
+		return "Id: " + id + "Nome: " + nome + "\nEmail: " + email + "\nLibriAcquistati: " + libriAcquistati;
 	}
 	
 	
