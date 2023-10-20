@@ -10,7 +10,7 @@ import libreriaManager.LibreriaOnline;
 
 public class LibroDAO {
 
-	public void prendiLibri(GestoreConnessioni gc, LibreriaOnline libreria) {
+	public static void prendiLibri(GestoreConnessioni gc, LibreriaOnline libreria) {
 		String query = "SELECT * FROM Libro";
 
 		ResultSet rs = gc.eseguiStatementQuery(query);
