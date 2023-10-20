@@ -3,15 +3,16 @@ package entities;
 import java.util.ArrayList;
 
 public class Libro {
-	private int id;
+	private int idLibro;
 	private String titolo;
 	private String autore;
 	private String genere;
 	private float prezzo;
+	
 	private ArrayList<Recensione> recensioni;
 	
-	public Libro(int id, String titolo, String autore, String genere, float prezzo) {
-		this.id = id;
+	public Libro(int idLibro, String titolo, String autore, String genere, float prezzo) {
+		this.idLibro = idLibro;
 		this.titolo = titolo;
 		this.autore = autore;
 		this.genere = genere;
@@ -19,12 +20,12 @@ public class Libro {
 		this.recensioni = new ArrayList<>();
 	}
 
-	public int getId() {
-		return id;
+	public int getIdLibro() {
+		return idLibro;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdLibro(int id) {
+		this.idLibro = id;
 	}
 
 	public String getTitolo() {
@@ -68,7 +69,7 @@ public class Libro {
 	}
 	
 	public String mostraDettagli() {
-		return "Id: " + id + "Titolo: " + titolo + "\nAutore: " + autore + "\nGenere: " + genere + "\nPrezzo: " + prezzo + " €" + "\nRecensioni: " + recensioni;
+		return "Id: " + idLibro + "Titolo: " + titolo + "\nAutore: " + autore + "\nGenere: " + genere + "\nPrezzo: " + prezzo + " €" + "\nRecensioni: " + recensioni;
 	}
 	
 	

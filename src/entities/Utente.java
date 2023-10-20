@@ -4,25 +4,26 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Utente {
-	private int id;
+	private int idUtente;
 	private String nome;
 	private String email;
+	
 	private ArrayList<Libro> libriAcquistati;
 	private HashSet<String> generi;
 	
-	public Utente(int id, String nome, String email) {
-		this.id = id;
+	public Utente(int idUtente, String nome, String email) {
+		this.idUtente = idUtente;
 		this.nome = nome;
 		this.email = email;
 		this.libriAcquistati = new ArrayList<>();
 	}
 
-	public int getId() {
-		return id;
+	public int getIdUtente() {
+		return idUtente;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdUtente(int id) {
+		this.idUtente = id;
 	}
 
 	public String getNome() {
@@ -50,7 +51,7 @@ public class Utente {
 	}
 	
 	public Recensione lasciaRecensioni(Libro l, int valutazione, String commento) {
-		return new Recensione(this.getId(), l.getId(), valutazione, commento);
+		return new Recensione(this.getIdUtente(), l.getIdLibro(), valutazione, commento);
 	}
 	
 	public void acquistaLibro (Libro libro) {
@@ -68,7 +69,7 @@ public class Utente {
 	 */
 	
 	public String toString() {
-		return "Id: " + id + "Nome: " + nome + "\nEmail: " + email + "\nLibriAcquistati: " + libriAcquistati;
+		return "Id: " + idUtente + "Nome: " + nome + "\nEmail: " + email + "\nLibriAcquistati: " + libriAcquistati;
 	}
 	
 	

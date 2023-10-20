@@ -19,9 +19,9 @@ public class Main {
         Libro libro3 = new Libro(3, "1984", "George Orwell", "Fiction", 15.0f);
         
         // Recensioni
-        Recensione recensione1 = new Recensione(utente1.getId(), libro1.getId(), 5, "Fantastico libro!");
-        Recensione recensione2 = new Recensione(utente2.getId(), libro1.getId(), 4, "Molto interessante.");
-        Recensione recensione3 = new Recensione(utente1.getId(), libro2.getId(), 4, "Mi è piaciuto molto.");
+        Recensione recensione1 = new Recensione(utente1.getIdUtente(), libro1.getIdLibro(), 5, "Fantastico libro!");
+        Recensione recensione2 = new Recensione(utente2.getIdUtente(), libro1.getIdLibro(), 4, "Molto interessante.");
+        Recensione recensione3 = new Recensione(utente1.getIdUtente(), libro2.getIdLibro(), 4, "Mi è piaciuto molto.");
         
         
         System.out.println(utente1);
