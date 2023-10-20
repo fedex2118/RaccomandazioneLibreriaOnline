@@ -1,6 +1,8 @@
 package main;
 
 import dao.UtenteDAO;
+import dao.LibroDAO;
+import dao.RecensioneDAO;
 import entities.Libro;
 import entities.Recensione;
 import entities.Utente;
@@ -41,16 +43,21 @@ public class Main {
         
         // TEST CONNESSIONE
 		String url = "jdbc:mysql://localhost:3306/libreriaonline";
-		String user = "root";
-		String pwd = "root";
+		String user = "javauser";
+		String pwd = "eAbrfcjiGdMo88eE";
 		
 		LibreriaOnline libreriaOnline = new LibreriaOnline();
 		
 		GestoreConnessioni gc = new GestoreConnessioni(url, user, pwd);
+		gc.stabilisciConnessione();
 		
 		libreriaOnline.setUtenti(UtenteDAO.prendiUtenti(gc, libreriaOnline));
-		libreriaOnline.setUtenti(UtenteDAO.prendiUtenti(gc, libreriaOnline));
-		libreriaOnline.setUtenti(UtenteDAO.prendiUtenti(gc, libreriaOnline));
+		libreriaOnline.setLibri(LibroDAO.prendiLibri(gc, libreriaOnline));
+		libreriaOnline.setRecensioni(RecensioneDAO.prendiRecensioni(gc, libreriaOnline));
+		
+		System.out.println(libreriaOnline.getUtenti());
+		System.out.println(libreriaOnline.getLibri());
+		System.out.println(libreriaOnline.getRecensioni());
 		
 		
 	}

@@ -69,7 +69,11 @@ public class Libro {
 	}
 	
 	public String mostraDettagli() {
-		return "Id: " + idLibro + "Titolo: " + titolo + "\nAutore: " + autore + "\nGenere: " + genere + "\nPrezzo: " + prezzo + " €" + "\nRecensioni: " + recensioni;
+		return "Id: " + idLibro + "\nTitolo: " + titolo + "\nAutore: " + autore + "\nGenere: " + genere + "\nPrezzo: " + prezzo + " €" + "\nRecensioni: " + recensioni;
+	}
+	
+	public String toString() {
+		return mostraDettagli();
 	}
 	
 	

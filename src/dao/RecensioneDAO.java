@@ -10,7 +10,7 @@ import libreriaManager.LibreriaOnline;
 
 public class RecensioneDAO {
 	public static ArrayList<Recensione> prendiRecensioni(GestoreConnessioni gc, LibreriaOnline libreria) {
-		String query = "SELECT * FROM Recensione";
+		String query = "SELECT * FROM Recensioni";
 		
 		ResultSet rs = gc.eseguiStatementQuery(query);
 		
@@ -21,7 +21,7 @@ public class RecensioneDAO {
 				int idLibro = Integer.parseInt(rs.getString(1));
 				int idUtente = Integer.parseInt(rs.getString(2));
 				int valutazione = Integer.parseInt(rs.getString(3));
-				String commento = rs.getString(3);
+				String commento = rs.getString(4);
 				Recensione recensione = new Recensione(idUtente, idLibro, 
 						valutazione, commento);
 				recensioni.add(recensione);

@@ -46,6 +46,6 @@ public class Recensione {
 	}
 	
 	public String toString() {
-		return "UtenteId: " + idUtente + "LibroId: " + idLibro + "\nValutazione: " + valutazione + "\nCommento: " + commento;
+		return "UtenteId: " + idUtente + "\nLibroId: " + idLibro + "\nValutazione: " + valutazione + "\nCommento: " + commento;
 	}
 }
