@@ -1,8 +1,11 @@
 package main;
 
+import dao.UtenteDAO;
 import entities.Libro;
 import entities.Recensione;
 import entities.Utente;
+import gestoreConnessioni.GestoreConnessioni;
+import libreriaManager.LibreriaOnline;
 
 public class Main {
 
@@ -40,6 +43,16 @@ public class Main {
 		String url = "jdbc:mysql://localhost:3306/libreriaonline";
 		String user = "root";
 		String pwd = "root";
+		
+		LibreriaOnline libreriaOnline = new LibreriaOnline();
+		
+		GestoreConnessioni gc = new GestoreConnessioni(url, user, pwd);
+		
+		libreriaOnline.setUtenti(UtenteDAO.prendiUtenti(gc, libreriaOnline));
+		libreriaOnline.setUtenti(UtenteDAO.prendiUtenti(gc, libreriaOnline));
+		libreriaOnline.setUtenti(UtenteDAO.prendiUtenti(gc, libreriaOnline));
+		
+		
 	}
 
 }

@@ -10,7 +10,7 @@ import libreriaManager.LibreriaOnline;
 
 public class LibroDAO {
 
-	public static void prendiLibri(GestoreConnessioni gc, LibreriaOnline libreria) {
+	public static ArrayList<Libro> prendiLibri(GestoreConnessioni gc, LibreriaOnline libreria) {
 		String query = "SELECT * FROM Libro";
 
 		ResultSet rs = gc.eseguiStatementQuery(query);
@@ -31,5 +31,7 @@ public class LibroDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		return libri;
 	}
 }

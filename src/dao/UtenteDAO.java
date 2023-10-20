@@ -10,7 +10,7 @@ import gestoreConnessioni.GestoreConnessioni;
 import libreriaManager.LibreriaOnline;
 
 public class UtenteDAO {
-	public static void prendiUtenti(GestoreConnessioni gc, LibreriaOnline libreria) {
+	public static ArrayList<Utente> prendiUtenti(GestoreConnessioni gc, LibreriaOnline libreria) {
 		String query = "SELECT * FROM Utente";
 		
 		ResultSet rs = gc.eseguiStatementQuery(query);
@@ -30,6 +30,8 @@ public class UtenteDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		return utenti;
 		
 		
 	}
