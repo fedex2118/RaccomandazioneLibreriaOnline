@@ -22,7 +22,7 @@ public class RecensioneDAO {
 				int idUtente = Integer.parseInt(rs.getString(2));
 				int valutazione = Integer.parseInt(rs.getString(3));
 				String commento = rs.getString(4);
-				Recensione recensione = new Recensione(idUtente, idLibro, 
+				Recensione recensione = new Recensione(idLibro, idUtente, 
 						valutazione, commento);
 				recensioni.add(recensione);
 			}
